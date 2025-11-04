@@ -1,3 +1,4 @@
+//About导航下界面
 const About = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-100 to-orange-200 flex flex-col items-center justify-center p-8">
