@@ -1,3 +1,17 @@
+/* Tailwind 基础样式 */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* 自定义全局样式 */
+body {
+  @apply bg-gray-50 text-gray-800 font-sans;
+}
+
+a {
+  @apply no-underline;
+}
+
+button {
+  @apply cursor-pointer;
+}

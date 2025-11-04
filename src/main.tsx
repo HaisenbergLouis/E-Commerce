@@ -8,11 +8,11 @@ import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <CartProvider>
+    <CartProvider>
+      <BrowserRouter>
         <App />
         <Toaster position="top-center" reverseOrder={false} />
-      </CartProvider>
-    </BrowserRouter>
+      </BrowserRouter>
+    </CartProvider>
   </React.StrictMode>
 );

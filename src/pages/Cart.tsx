@@ -1,4 +1,3 @@
-// import React from 'react';
 import { useCart } from '../context/CartContext';
 import { useNavigate } from 'react-router-dom';
 
@@ -21,16 +20,19 @@ const Cart = () => {
 
       <div className="space-y-4">
         {cartItems.map((item) => (
-          <div key={item.id} className="flex justify-between items-center border-b pb-4">
+          <div
+            key={item.id}
+            className="flex flex-col sm:flex-row justify-between items-center border-b pb-4"
+          >
             <div className="flex items-center space-x-4">
-              <img src={item.image} alt={item.title} className="w-16 h-16 object-cover rounded" />
+              <img src={item.image} alt={item.title} className="w-24 h-24 object-cover rounded" />
               <div>
                 <h3 className="font-semibold">{item.title}</h3>
                 <p className="text-gray-500">${item.price.toFixed(2)}</p>
               </div>
             </div>
 
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center space-x-3 mt-2 sm:mt-0">
               <button
                 onClick={() => removeFromCart(item.id)}
                 className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600"
@@ -52,7 +54,7 @@ const Cart = () => {
         ))}
       </div>
 
-      <div className="mt-8 flex justify-between items-center">
+      <div className="mt-8 flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0">
         <button
           onClick={clearCart}
           className="px-4 py-2 bg-gray-300 text-black rounded hover:bg-gray-400"
